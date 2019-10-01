@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Anime Heaven Site Design</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta property="og:image" content="OG.png"/>
+<link type="text/css" rel="stylesheet" id="stylesheet" href="/css/style3v2.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head><body><div class="header">
+	<div class="headermain">
+	<a href="/"><div class="logo"></div></a>
+	<div class="searchbox"><form class="searchform" action="search" method="get"><input class="searchinput" name="q" maxlength="100" placeholder="Search"><input class="searchsubmit" type="submit" value=""></form></div>
+<div class="bwbox" id="bbox" onclick="makebw()"><div class="bwselect" id="bwsel"></div></div>
+<a class="menua" href="/staff"><div class="menue">Staff</div></a>
+<a class="menua" href="/"><div class="menue">Random</div></a>
+<a class="menua" href="/schedule"><div class="menue">Schedule</div></a>
+<a class="menua" href="/50latest_sr_3"><div class="menue">Popular</div></a>
+<a class="menua" href="/50latest_sr_1"><div class="menue">Ongoing</div></a>
+<a class="menua" href="/genres"><div class="menue">Genres</div></a>
+<a class="menua" href="/movies"><div class="menue">Movies</div></a>
+<a class="menua" href="/dubbed"><div class="menue">Dubbed</div></a>
+<a class="menua" href="/anime"><div class="menue">Anime</div></a>
+<div class="burger" id="burgeri" onclick="makemenu()"></div>
+</div>
+</div>
+<div class="burgermenu" id="burger">
+<div class="line"></div>
+<a class="menua" href="/anime"><div class="menue2">Anime</div></a>
+<a class="menua" href="/dubbed"><div class="menue2">Dubbed</div></a>
+<a class="menua" href="/movies"><div class="menue2">Movies</div></a>
+<a class="menua" href="/genres"><div class="menue2">Genres</div></a>
+<a class="menua" href="/years"><div class="menue2">Years</div></a>
+<a class="menua" href="/50latest_sr_1"><div class="menue2">Ongoing</div></a>
+<a class="menua" href="/50latest_sr_3"><div class="menue2">Popular Today</div></a>
+<a class="menua" href="/schedule"><div class="menue2">Schedule</div></a>
+<a class="menua" href="/"><div class="menue2">Random</div></a>
+<a class="menua" href="/staff"><div class="menue2">Staff</div></a>
+</div>
+<div class="cleft"></div><div class="line"></div><script>
+var burg = document.getElementById('burger');
+var burgi = document.getElementById('burgeri');
+var bwbox = document.getElementById('bbox');
+var bwseli = document.getElementById('bwsel');
+var stylesheeti = document.getElementById('stylesheet');
+var menu=0;
+var bw=0;
+function getCookie(name) {
+  var value = "; " + document.cookie;
+  var parts = value.split("; " + name + "=");
+  if (parts.length == 2) return parts.pop().split(";").shift();
+}
+function makemenu()
+{
+	if(menu==0)
+	{
+		burg.className='burgermenu2';
+		burgi.className='burgeractive';
+		menu=1;
+		console.log(1);
+	}
+	else
+	{
+		burg.className='burgermenu';
+		burgi.className='burger';
+		menu=0;
+		console.log(2);
+	}
+}
+function makebw()
+{
+	if(bw==0)
+	{
+		bwseli.className='bwselect2';
+		bw=1;
+		stylesheeti.href='/css/style3v3.css';
+		var d = new Date();
+		d.setTime(d.getTime() + (365*24*60*60*1000));
+		var expires = "expires="+ d.toUTCString();
+		document.cookie = "bw=1;" + expires + ";path=/";
+	}
+	else
+	{
+		bwseli.className='bwselect';
+		stylesheeti.href='/css/style3v2.css';
+		bw=0;
+		var d = new Date();
+		d.setTime(d.getTime() + (365*24*60*60*1000));
+		var expires = "expires="+ d.toUTCString();
+		document.cookie = "bw=0;" + expires + ";path=/";
+	}
+}
+</script>
+<div class="slider"><div class="sliderpnbox"><div class="sliderp" onclick="prewm()"></div><div class="slidern" onclick="nextm()"></div></div><div class="slidermain0" id="slide"><div class="centerf"><div class="centerf2">
+<a class="an" href="#"><img class="sliderimg" src="/img/ah_res_slides/That-Time-I-Got-Reincarnated-as-a-Slime.jpg"></a>
+<a class="an" href="#"><img class="sliderimg" src="/img/ah_res_slides/Tokyo-Ghoul---re-2nd-Season.jpg"></a>
+<a class="an" href="#"><img class="sliderimg" src="/img/ah_res_slides/Golden-Kamuy-2nd-Season.jpg"></a>
+<a class="an" href="#"><img class="sliderimg" src="/img/ah_res_slides/Overlord-3rd-Season.jpg"></a>
+<a class="an" href="#"><img class="sliderimg" src="/img/ah_res_slides/Double-Decker---Doug-and-Kirill.jpg"></a>
+</div></div></div></div><div class="line"></div><script>
+var slide = document.getElementById('slide');
+var now=0;
+var menu=0;
+var mv=4;
+var pos=0;
+var elem=5;
+var smove = setInterval(function () {nextm()}, 7000);
+function prewm()
+{
+	now--;
+	if(now<0)
+	{
+		now=elem-1;
+	}
+	slide.className='slidermain'+now;
+	clearInterval(smove);
+	smove = setInterval(function () {nextm()}, 7000);
+}
+function nextm()
+{
+	now++;
+	slide.className='slidermain'+now;
+	if(now>=elem)
+	{
+		now=0;
+		slide.className='slidermain'+now;
+	}
+	clearInterval(smove);
+	smove = setInterval(function () {nextm()}, 7000);
+}
+</script>
+<div class="notmain">
+<div class="maindark">
+	<div class="iepbox">
+<div class="conm"><a class="cona" href="#">Himote House</a>
+			<div class="con2m">Comedy, Slice Of Life, Cg Animation, Original Work</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/Himote_House.jpg" alt="Himote House"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1r"><div class="centerv">Episode</div></div>
+<div class="iepst2r"><div class="centerv">5</div></div>
+<div class="iepst3r"><div class="centerv">9 mins ago</div></div>
+</div></div></a></div><div class="con"><div class="condd"><a class="cona" href="#">Himote House</a>
+	<div class="con2">Comedy, Slice Of Life, Cg Animation, Original Work</div></div>
+	</div></div></div><div class="conm"><a class="cona" href="#">Anima Yell</a>
+			<div class="con2m">School Club, School Life</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/Anima_Yell.jpg" alt="Anima Yell"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1r"><div class="centerv">Episode</div></div>
+<div class="iepst2r"><div class="centerv">5</div></div>
+<div class="iepst3r"><div class="centerv">9 mins ago</div></div>
+</div></div></a></div><div class="con"><div class="condd"><a class="cona" href="#">Anima Yell</a>
+	<div class="con2">School Club, School Life</div></div>
+	</div></div></div><div class="conm"><a class="cona" href="#">Ulysses - Jeanne dArc and the Alchemist Knight</a>
+			<div class="con2m">Action, Fantasy, Europe, Historical, Magic, Medieval</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/Ulysses_-_Jeanne_dArc_and_the_Alchemist_Knight.jpg" alt="Ulysses - Jeanne dArc and the Alchemist Knight"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1r"><div class="centerv">Episode</div></div>
+<div class="iepst2r"><div class="centerv">5</div></div>
+<div class="iepst3r"><div class="centerv">27 mins ago</div></div>
+</div></div></a></div><div class="con"><div class="condd"><a class="cona" href="#">Ulysses - Jeanne dArc and the Alchemist Knight</a>
+	<div class="con2">Action, Fantasy, Europe, Historical, Magic, Medieval</div></div>
+	</div></div></div><div class="condm"><a class="cona" href="#">Double Decker - Doug and Kirill Dubbed</a>
+			<div class="con2m">Detectives, Original Work</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/Double_Decker_-_Doug_and_Kirill_Dubbed.jpg" alt="Double Decker - Doug and Kirill Dubbed"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1r"><div class="centerv">Episode</div></div>
+<div class="iepst2r"><div class="centerv">5</div></div>
+<div class="iepst3r"><div class="centerv">33 mins ago</div></div>
+</div></div></a></div><div class="cond"><div class="condd"><a class="cona" href="#">Double Decker - Doug and Kirill Dubbed</a>
+	<div class="con2">Detectives, Original Work</div>
+	</div></div></div></div><div class="conm"><a class="cona" href="#l">Double Decker - Doug and Kirill</a>
+			<div class="con2m">Detectives, Original Work</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/Double_Decker_-_Doug_and_Kirill.jpg" alt="Double Decker - Doug and Kirill"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1r"><div class="centerv">Episode</div></div>
+<div class="iepst2r"><div class="centerv">7</div></div>
+<div class="iepst3r"><div class="centerv">1 hr ago</div></div>
+</div></div></a></div><div class="con"><div class="condd"><a class="cona" href="#">Double Decker - Doug and Kirill</a>
+	<div class="con2">Detectives, Original Work</div></div>
+	</div></div></div><div class="condm"><a class="cona" href="#">JoJos Bizarre Adventure - Diamond is Unbreakable Dubbed</a>
+			<div class="con2m">Action, Mystery, Shounen, Animal Abuse,  Supernatural, Violence</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/JoJos_Bizarre_Adventure_-_Diamond_is_Unbreakable_Dubbed.jpg" alt="JoJos Bizarre Adventure - Diamond is Unbreakable Dubbed"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1r"><div class="centerv">Episode</div></div>
+<div class="iepst2r"><div class="centerv">11</div></div>
+<div class="iepst3r"><div class="centerv">1 hr ago</div></div>
+</div></div></a></div><div class="cond"><div class="condd"><a class="cona" href="#">JoJos Bizarre Adventure - Diamond is Unbreakable Dubbed</a>
+	<div class="con2">Action, Mystery, Shounen, Animal Abuse,  Supernatural, Violence</div>
+	</div></div></div></div><div class="condm"><a class="cona" href="#">Dragon Ball Super Dubbed</a>
+			<div class="con2m">Action, Fantasy, Shounen, Aliens, Hand To Hand Combat, Martial Arts, Superpowers</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/Dragon_Ball_Super_Dubbed.jpg" alt="Dragon Ball Super Dubbed"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1r"><div class="centerv">Episode</div></div>
+<div class="iepst2r"><div class="centerv">86</div></div>
+<div class="iepst3r"><div class="centerv">1 hr ago</div></div>
+</div></div></a></div><div class="cond"><div class="condd"><a class="cona" href="#">Dragon Ball Super Dubbed</a>
+	<div class="con2">Action, Fantasy, Shounen, Aliens, Hand To Hand Combat, Martial Arts, Superpowers</div>
+	</div></div></div></div><div class="condm"><a class="cona" href="#">Hunter x Hunter 2011 Dubbed</a>
+			<div class="con2m">Action, Adventure, Shounen,  Superpowers, Violence</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/Hunter_x_Hunter_2011_Dubbed.jpg" alt="Hunter x Hunter 2011 Dubbed"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1r"><div class="centerv">Episode</div></div>
+<div class="iepst2r"><div class="centerv">118</div></div>
+<div class="iepst3r"><div class="centerv">1 hr ago</div></div>
+</div></div></a></div><div class="cond"><div class="condd"><a class="cona" href="#">Hunter x Hunter 2011 Dubbed</a>
+	<div class="con2">Action, Adventure, Shounen,  Superpowers, Violence</div>
+	</div></div></div></div><div class="condm"><a class="cona" href="#">Boruto - Naruto Next Generations Dubbed</a>
+			<div class="con2m">Action, Shounen,  Ninja</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/Boruto_-_Naruto_Next_Generations_Dubbed.jpg" alt="Boruto - Naruto Next Generations Dubbed"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1r"><div class="centerv">Episode</div></div>
+<div class="iepst2r"><div class="centerv">6</div></div>
+<div class="iepst3r"><div class="centerv">1 hr ago</div></div>
+</div></div></a></div><div class="cond"><div class="condd"><a class="cona" href="#">Boruto - Naruto Next Generations Dubbed</a>
+	<div class="con2">Action, Shounen,  Ninja</div>
+	</div></div></div></div><div class="condm"><a class="cona" href="#">Attack on Titan 3 Dubbed</a>
+			<div class="con2m">Action, Fantasy, Horror, Military, Post-apocalyptic, Explicit Violence</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/Attack_on_Titan_3_Dubbed.jpg" alt="Attack on Titan 3 Dubbed"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1r"><div class="centerv">Episode</div></div>
+<div class="iepst2r"><div class="centerv">11</div></div>
+<div class="iepst3r"><div class="centerv">2 hrs ago</div></div>
+</div></div></a></div><div class="cond"><div class="condd"><a class="cona" href="#">Attack on Titan 3 Dubbed</a>
+	<div class="con2">Action, Fantasy, Horror, Military, Post-apocalyptic, Explicit Violence</div>
+	</div></div></div></div><div class="conm"><a class="cona" href="#">Boruto - Naruto Next Generations</a>
+			<div class="con2m">Action, Shounen,  Ninja</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/Boruto_-_Naruto_Next_Generations.jpg" alt="Boruto - Naruto Next Generations"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1r"><div class="centerv">Episode</div></div>
+<div class="iepst2r"><div class="centerv">80</div></div>
+<div class="iepst3r"><div class="centerv">2 hrs ago</div></div>
+</div></div></a></div><div class="con"><div class="condd"><a class="cona" href="#">Boruto - Naruto Next Generations</a>
+	<div class="con2">Action, Shounen,  Ninja</div></div>
+	</div></div></div><div class="conm"><a class="cona" href="#">GeGeGe no Kitaro</a>
+			<div class="con2m">Shounen,  Japanese Mythology, Supernatural</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/GeGeGe_no_Kitaro.jpg" alt="GeGeGe no Kitaro"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1r"><div class="centerv">Episode</div></div>
+<div class="iepst2r"><div class="centerv">31</div></div>
+<div class="iepst3r"><div class="centerv">14 hrs ago</div></div>
+</div></div></a></div><div class="con"><div class="condd"><a class="cona" href="#">GeGeGe no Kitaro</a>
+	<div class="con2">Shounen,  Japanese Mythology, Supernatural</div></div>
+	</div></div></div><div class="conm"><a class="cona" href="OnePiece">One Piece</a>
+			<div class="con2m">Action, Adventure, Comedy, Shounen,  Pirates, Superpowers</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/One_Piece.jpg" alt="One Piece"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1r"><div class="centerv">Episode</div></div>
+<div class="iepst2r"><div class="centerv">860</div></div>
+<div class="iepst3r"><div class="centerv">15 hrs ago</div></div>
+</div></div></a></div><div class="con"><div class="condd"><a class="cona" href="#">One Piece</a>
+	<div class="con2">Action, Adventure, Comedy, Shounen,  Pirates, Superpowers</div></div>
+	</div></div></div><div class="conm"><a class="cona" href="#">Fairy Tail 2018</a>
+			<div class="con2m">Action, Adventure, Fantasy, Shounen, Guilds, Magic</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/Fairy_Tail_2018.jpg" alt="Fairy Tail 2018"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="FairyTail2018"><div class="ieps"><div class="ieps2">
+<div class="iepst1r"><div class="centerv">Episode</div></div>
+<div class="iepst2r"><div class="centerv">5</div></div>
+<div class="iepst3r"><div class="centerv">17 hrs ago</div></div>
+</div></div></a></div><div class="con"><div class="condd"><a class="cona" href="FairyTail2018">Fairy Tail 2018</a>
+	<div class="con2">Action, Adventure, Fantasy, Shounen, Guilds, Magic</div></div>
+	</div></div></div><div class="conm"><a class="cona" href="#">Ace Attorney Season 2</a>
+			<div class="con2m">Comedy, Drama, Mystery, Lawyers, Work Life</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/Ace_Attorney_Season_2.jpg" alt="Ace Attorney Season 2"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1r"><div class="centerv">Episode</div></div>
+<div class="iepst2r"><div class="centerv">5</div></div>
+<div class="iepst3r"><div class="centerv">17 hrs ago</div></div>
+</div></div></a></div><div class="con"><div class="condd"><a class="cona" href="#">Ace Attorney Season 2</a>
+	<div class="con2">Comedy, Drama, Mystery, Lawyers, Work Life</div></div>
+	</div></div></div><div class="condm"><a class="cona" href="#">Radiant Dubbed</a>
+			<div class="con2m">Action, Adventure, Fantasy</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/Radiant_Dubbed.jpg" alt="Radiant Dubbed"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1r"><div class="centerv">Episode</div></div>
+<div class="iepst2r"><div class="centerv">2</div></div>
+<div class="iepst3r"><div class="centerv">20 hrs ago</div></div>
+</div></div></a></div><div class="cond"><div class="condd"><a class="cona" href="#">Radiant Dubbed</a>
+	<div class="con2">Action, Adventure, Fantasy</div>
+	</div></div></div></div><div class="condm"><a class="cona" href="#">Conception Dubbed</a>
+			<div class="con2m">Action, Fantasy, Harem, Magic, Monsters, Person In A Strange World, Sexual Content</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/Conception_Dubbed.jpg" alt="Conception Dubbed"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1r"><div class="centerv">Episode</div></div>
+<div class="iepst2r"><div class="centerv">2</div></div>
+<div class="iepst3r"><div class="centerv">20 hrs ago</div></div>
+</div></div></a></div><div class="cond"><div class="condd"><a class="cona" href="#">Conception Dubbed</a>
+	<div class="con2">Action, Fantasy, Harem, Magic, Monsters, Person In A Strange World, Sexual Content</div>
+	</div></div></div></div><div class="conm"><a class="cona" href="#">Release the Spyce</a>
+			<div class="con2m">Action, Original Work, School Life</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/Release_the_Spyce.jpg" alt="Release the Spyce"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1r"><div class="centerv">Episode</div></div>
+<div class="iepst2r"><div class="centerv">5</div></div>
+<div class="iepst3r"><div class="centerv">21 hrs ago</div></div>
+</div></div></a></div><div class="con"><div class="condd"><a class="cona" href="#">Release the Spyce</a>
+	<div class="con2">Action, Original Work, School Life</div></div>
+	</div></div></div><div class="condm"><a class="cona" href="#">SSSS Gridman Dubbed</a>
+			<div class="con2m">Action, Sci Fi, Monsters</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/SSSS_Gridman_Dubbed.jpg" alt="SSSS Gridman Dubbed"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1r"><div class="centerv">Episode</div></div>
+<div class="iepst2r"><div class="centerv">5</div></div>
+<div class="iepst3r"><div class="centerv">23 hrs ago</div></div>
+</div></div></a></div><div class="cond"><div class="condd"><a class="cona" href="#">SSSS Gridman Dubbed</a>
+	<div class="con2">Action, Sci Fi, Monsters</div>
+	</div></div></div></div><div class="conm"><a class="cona" href="#">SSSS Gridman</a>
+			<div class="con2m">Action, Sci Fi, Monsters</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/SSSS_Gridman.jpg" alt="SSSS Gridman"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1r"><div class="centerv">Episode</div></div>
+<div class="iepst2r"><div class="centerv">5</div></div>
+<div class="iepst3r"><div class="centerv">23 hrs ago</div></div>
+</div></div></a></div><div class="con"><div class="condd"><a class="cona" href="#">SSSS Gridman</a>
+	<div class="con2">Action, Sci Fi, Monsters</div></div>
+	</div></div></div><div class="conm"><a class="cona" href="#">Sword Art Online - Alicization</a>
+			<div class="con2m">Action, Fantasy, Sci Fi, Mmorpg, Virtual Reality</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/Sword_Art_Online_-_Alicization.jpg" alt="Sword Art Online - Alicization"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1"><div class="centerv">Episode</div></div>
+<div class="iepst2"><div class="centerv">5</div></div>
+<div class="iepst3"><div class="centerv">1 day ago</div></div>
+</div></div></a></div><div class="con"><div class="condd"><a class="cona" href="#">Sword Art Online - Alicization</a>
+	<div class="con2">Action, Fantasy, Sci Fi, Mmorpg, Virtual Reality</div></div>
+	</div></div></div><div class="conm"><a class="cona" href="#">Goblin Slayer</a>
+			<div class="con2m">Action, Adventure, Fantasy, Seinen, Dark Fantasy, Guilds, Magic, Medieval, Monsters, Mature Themes</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/Goblin_Slayer.jpg" alt="Goblin Slayer"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1"><div class="centerv">Episode</div></div>
+<div class="iepst2"><div class="centerv">5</div></div>
+<div class="iepst3"><div class="centerv">1 day ago</div></div>
+</div></div></a></div><div class="con"><div class="condd"><a class="cona" href="#">Goblin Slayer</a>
+	<div class="con2">Action, Adventure, Fantasy, Seinen, Dark Fantasy, Guilds, Magic, Medieval, Monsters, Mature Themes</div></div>
+	</div></div></div><div class="conm"><a class="cona" href="#">Radiant</a>
+			<div class="con2m">Action, Adventure, Fantasy</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/Radiant.jpg" alt="Radiant"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1"><div class="centerv">Episode</div></div>
+<div class="iepst2"><div class="centerv">5</div></div>
+<div class="iepst3"><div class="centerv">1 day ago</div></div>
+</div></div></a></div><div class="con"><div class="condd"><a class="cona" href="#">Radiant</a>
+	<div class="con2">Action, Adventure, Fantasy</div></div>
+	</div></div></div><div class="conm"><a class="cona" href="#">Gakuen Basara - Samurai High School</a>
+			<div class="con2m">Comedy, Parody, Samurai, School Life</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/Gakuen_Basara_-_Samurai_High_School.jpg" alt="Gakuen Basara - Samurai High School"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1"><div class="centerv">Episode</div></div>
+<div class="iepst2"><div class="centerv">5</div></div>
+<div class="iepst3"><div class="centerv">1 day ago</div></div>
+</div></div></a></div><div class="con"><div class="condd"><a class="cona" href="#">Gakuen Basara - Samurai High School</a>
+	<div class="con2">Comedy, Parody, Samurai, School Life</div></div>
+	</div></div></div><div class="condm"><a class="cona" href="#">ReLIFE Final Arc Dubbed</a>
+			<div class="con2m">Comedy, Drama, Romance, Seinen, Slice Of Life, Age Transformation,  Psychological, School Life</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/ReLIFE_Final_Arc_Dubbed.jpg" alt="ReLIFE Final Arc Dubbed"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1"><div class="centerv">Episode</div></div>
+<div class="iepst2"><div class="centerv">4</div></div>
+<div class="iepst3"><div class="centerv">1 day ago</div></div>
+</div></div></a></div><div class="cond"><div class="condd"><a class="cona" href="#">ReLIFE Final Arc Dubbed</a>
+	<div class="con2">Comedy, Drama, Romance, Seinen, Slice Of Life, Age Transformation,  Psychological, School Life</div>
+	</div></div></div></div><div class="conm"><a class="cona" href="#">Senran Kagura - Shinovi Master</a>
+			<div class="con2m">Action, Ecchi, Fantasy, Ninja</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/Senran_Kagura_-_Shinovi_Master.jpg" alt="Senran Kagura - Shinovi Master"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1"><div class="centerv">Episode</div></div>
+<div class="iepst2"><div class="centerv">4</div></div>
+<div class="iepst3"><div class="centerv">1 day ago</div></div>
+</div></div></a></div><div class="con"><div class="condd"><a class="cona" href="#">Senran Kagura - Shinovi Master</a>
+	<div class="con2">Action, Ecchi, Fantasy, Ninja</div></div>
+	</div></div></div><div class="conm"><a class="cona" href="#">JoJos Bizarre Adventure - Golden Wind</a>
+			<div class="con2m">Action, Shounen, Supernatural</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/JoJos_Bizarre_Adventure_-_Golden_Wind.jpg" alt="JoJos Bizarre Adventure - Golden Wind"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1"><div class="centerv">Episode</div></div>
+<div class="iepst2"><div class="centerv">5</div></div>
+<div class="iepst3"><div class="centerv">1 day ago</div></div>
+</div></div></a></div><div class="con"><div class="condd"><a class="cona" href="#">JoJos Bizarre Adventure - Golden Wind</a>
+	<div class="con2">Action, Shounen, Supernatural</div></div>
+	</div></div></div><div class="conm"><a class="cona" href="#">Boarding School Juliet</a>
+			<div class="con2m">Romance, Shounen, Boarding School, School Life</div>
+			</div><div class="iep">
+			<div class="ieppic"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/Boarding_School_Juliet.jpg" alt="Boarding School Juliet"></a></div>
+			<div class="iepcon">
+			<div class="iepsbox"><a href="#"><div class="ieps"><div class="ieps2">
+<div class="iepst1"><div class="centerv">Episode</div></div>
+<div class="iepst2"><div class="centerv">5</div></div>
+<div class="iepst3"><div class="centerv">1 day ago</div></div>
+</div></div></a></div><div class="con"><div class="condd"><a class="cona" href="#">Boarding School Juliet</a>
+	<div class="con2">Romance, Shounen, Boarding School, School Life</div></div>
+	</div></div></div><a class="morean" href="#"><div class="more">Show More</div></a>
+	</div>
+	<div class="sidemain"><div class="side">
+<div class="chatbox"><script id="cid0020000167426772488" data-cfasync="false" async src="/js/gz/emb.js" style="width: 100%;height: 459px;">{"handle":"animeheaveneu","arch":"js","styles":{"a":"ffffff","c":"e81e30","d":"e81e30","e":"ffffff","h":"ffffff","l":"efefef","m":"ffffff","q":"ffffff","t":0,"sbc":"bbbbbb"}}</script></div>
+	<div class="randombox">
+	<div class="c"><a class="an" href="#"><img class="coveri" src="/img/coversjpg/A_Lull_in_the_Sea_Dubbed.jpg" alt="A Lull in the Sea Dubbed"></a></div>
+	<div class="rnd">A Lull in the Sea Dubbed</div></a>
+	</div>
+		<div class="popularbox">
+	<div class="lisbox2">
+		<div class="c"><div class="lisb">Popular today
+		</div>
+		</div>
+		<a class="an" href="OnePiece"><div class="lis">#1 (10418) One Piece</div></a><a class="an" href="#"><div class="lis">#2 (8470) Fairy Tail 2018</div></a><a class="an" href="#"><div class="lis">#3 (6860) Goblin Slayer</div></a><a class="an" href="#"><div class="lis">#4 (6116) Sword Art Online - Alicization</div></a><a class="an" href="#"><div class="lis">#5 (4507) Boruto - Naruto Next Generations</div></a><a class="an" href="#"><div class="lis">#6 (2401) Naruto Shippuden Dubbed</div></a><a class="an" href="#"><div class="lis">#7 (1670) One Piece Dubbed</div></a><a class="an" href="#"><div class="lis">#8 (1567) Radiant</div></a><a class="an" href="#"><div class="lis">#9 (1431) Naruto Shippuden</div></a><a class="an" href="#"><div class="lis">#10 (1353) Dragon Ball Super Dubbed</div></a>
+	</div>
+	</div>
+	<div class="ongoingbox">
+	<div class="lisbox2">
+		<div class="c"><div class="lisb">Ongoing anime
+		</div>
+		</div>
+		<a class="an" href="#"><div class="lis">A Certain Magical Index 3</div></a><a class="an" href="#"><div class="lis">A Certain Magical Index 3 Dubbed</div></a><a class="an" href="#"><div class="lis">Ace Attorney Season 2</div></a><a class="an" href="#"><div class="lis">Angels of Death</div></a><a class="an" href="#"><div class="lis">Angels of Death Dubbed</div></a><a class="an" href="#"><div class="lis">Anima Yell</div></a><a class="an" href="#"><div class="lis">As Miss Beelzebub Likes</div></a><a class="an" href="#"><div class="lis">Attack on Titan - Lost Girls OVA</div></a><a class="an" href="#"><div class="lis">Attack on Titan 3 Dubbed</div></a><a class="an" href="#"><div class="lis">Baki</div></a><a class="an" href="#"><div class="lis">Bakumatsu</div></a><a class="an" href="#"><div class="lis">Banana Fish</div></a><a class="an" href="#"><div class="lis">Between the Sky and Sea</div></a><a class="an" href="#"><div class="lis">Beyblade Burst Dubbed</div></a><a class="an" href="#"><div class="lis">Black Clover</div></a><a class="an" href="#"><div class="lis">Black Clover Dubbed</div></a><a class="an" href="#"><div class="lis">Bloom Into You</div></a><a class="an" href="#"><div class="lis">Boarding School Juliet</div></a><a class="an" href="#"><div class="lis">Boruto - Naruto Next Generations</div></a><a class="an" href="#"><div class="lis">Boruto - Naruto Next Generations Dubbed</div></a><a class="an" href="#"><div class="lis">Captain Tsubasa 2018</div></a><a class="an" href="#"><div class="lis">Conception</div></a><a class="an" href="#"><div class="lis">Conception Dubbed</div></a><a class="an" href="#"><div class="lis">DAKAICHI -Im being harassed by the sexiest man of the year-</div></a><a class="an" href="#"><div class="lis">Digimon Adventure Tri</div></a><a class="an" href="#"><div class="lis">Double Decker - Doug and Kirill</div></a><a class="an" href="#"><div class="lis">Double Decker - Doug and Kirill Dubbed</div></a><a class="an" href="#"><div class="lis">Dragon Ball Heroes</div></a><a class="an" href="#"><div class="lis">Dragon Ball Super Dubbed</div></a><a class="an" href="#"><div class="lis">FLCL - Alternative Dubbed</div></a><a class="an" href="#"><div class="lis">Fairy Tail 2014 OVA</div></a><a class="an" href="#"><div class="lis">Fairy Tail 2018</div></a><a class="an" href="#"><div class="lis">Fairy Tail 2018 Dubbed</div></a><a class="an" href="#"><div class="lis">Fist of the Blue Sky - Regenesis 2nd Season</div></a><a class="an" href="#"><div class="lis">Gakuen Basara - Samurai High School</div></a><a class="an" href="#"><div class="lis">GeGeGe no Kitaro</div></a><a class="an" href="#"><div class="lis">Goblin Slayer</div></a><a class="an" href="#"><div class="lis">Goblin Slayer Dubbed</div></a><a class="an" href="#"><div class="lis">Golden Kamuy 2nd Season</div></a><a class="an" href="#"><div class="lis">Golden Kamuy 2nd Season Dubbed</div></a><a class="an" href="#"><div class="lis">Gurazeni - Money Pitch 2nd Season</div></a><a class="an" href="#"><div class="lis">Hanebado Dubbed</div></a><a class="an" href="#"><div class="lis">Himote House</div></a><a class="an" href="#"><div class="lis">Hinomaru Sumo</div></a><a class="an" href="#"><div class="lis">Hinomaru Sumo Dubbed</div></a><a class="an" href="#"><div class="lis">Hunter x Hunter 2011 Dubbed</div></a><a class="an" href="#"><div class="lis">Irozuku Sekai no Ashita kara</div></a><a class="an" href="#"><div class="lis">Jingais Wife</div></a><a class="an" href="#"><div class="lis">JoJos Bizarre Adventure - Diamond is Unbreakable Dubbed</div></a><a class="an" href="#"><div class="lis">JoJos Bizarre Adventure - Golden Wind</div></a><a class="an" href="#"><div class="lis">Karakuri Circus</div></a><a class="an" href="#"><div class="lis">Laytons Mystery Detective Agency</div></a><a class="an" href="#"><div class="lis">Merc StoriA - The Apathetic Boy and the Girl in a Bottle</div></a><a class="an" href="#"><div class="lis">Monster Hunter Stories - RIDE ON Dubbed</div></a><a class="an" href="#"><div class="lis">Mr. Tonegawa Middle Management Blues</div></a><a class="an" href="#"><div class="lis">Mr. Tonegawa Middle Management Blues Dubbed</div></a><a class="an" href="#"><div class="lis">Ms vampire who lives in my neighborhood</div></a><a class="an" href="#"><div class="lis">My Sister - My Writer</div></a><a class="an" href="#"><div class="lis">Naruto Shippuden Dubbed</div></a><a class="an" href="#"><div class="lis">One Piece</div></a><a class="an" href="#"><div class="lis">One Piece Dubbed</div></a><a class="an" href="#"><div class="lis">Pokemon Sun and Moon</div></a><a class="an" href="#"><div class="lis">Pokemon XY and Z</div></a><a class="an" href="#"><div class="lis">Pokemon XY and Z Dubbed</div></a><a class="an" href="#"><div class="lis">RErideD - Derrida who leaps through time</div></a><a class="an" href="#"><div class="lis">RErideD - Derrida who leaps through time Dubbed</div></a><a class="an" href="#"><div class="lis">Radiant</div></a><a class="an" href="#"><div class="lis">Radiant Dubbed</div></a><a class="an" href="#"><div class="lis">Rascal Does Not Dream of Bunny Girl Senpai</div></a><a class="an" href="#"><div class="lis">Re ZERO -Starting Life in Another World- Dubbed</div></a><a class="an" href="#"><div class="lis">Reikenzan - Eichi e no Shikaku</div></a><a class="an" href="#"><div class="lis">Release the Spyce</div></a><a class="an" href="#"><div class="lis">Run with the Wind</div></a><a class="an" href="#"><div class="lis">SSSS Gridman</div></a><a class="an" href="#"><div class="lis">SSSS Gridman Dubbed</div></a><a class="an" href="#"><div class="lis">Senran Kagura - Shinovi Master</div></a><a class="an" href="#"><div class="lis">Senran Kagura - Shinovi Master Dubbed</div></a><a class="an" href="#"><div class="lis">Skull-face Bookseller Honda-san</div></a><a class="an" href="#"><div class="lis">Space Battleship Tiramisu 2</div></a><a class="an" href="#"><div class="lis">Space Battleship Tiramisu 2 Dubbed</div></a><a class="an" href="#"><div class="lis">Sword Art Online - Alicization</div></a><a class="an" href="#"><div class="lis">Tada Never Falls in Love Dubbed</div></a><a class="an" href="#"><div class="lis">That Time I Got Reincarnated as a Slime</div></a><a class="an" href="#"><div class="lis">That Time I Got Reincarnated as a Slime Dubbed</div></a><a class="an" href="#"><div class="lis">The Girl in Twilight</div></a><a class="an" href="#"><div class="lis">Todays Menu for Emiya Family</div></a><a class="an" href="#"><div class="lis">Tokyo Ghoul - re 2nd Season</div></a><a class="an" href="#"><div class="lis">Tokyo Ghoul - re 2nd Season Dubbed</div></a><a class="an" href="#"><div class="lis">Tsurune</div></a><a class="an" href="#"><div class="lis">Twin Star Exorcists Dubbed</div></a><a class="an" href="#"><div class="lis">Ulysses - Jeanne dArc and the Alchemist Knight</div></a><a class="an" href="#"><div class="lis">Ulysses - Jeanne dArc and the Alchemist Knight Dubbed</div></a><a class="an" href="#"><div class="lis">UzaMaid</div></a><a class="an" href="#"><div class="lis">Voice of Fox</div></a><a class="an" href="#"><div class="lis">Xuan Yuan Sword Luminary</div></a><a class="an" href="#"><div class="lis">Youkai Watch</div></a><a class="an" href="#"><div class="lis">Yu-Gi-Oh VRAINS</div></a><a class="an" href="#"><div class="lis">Yuuna and the Haunted Hot Springs OVA</div></a><a class="an" href="#"><div class="lis">Zombieland Saga</div></a><a class="an" href="#"><div class="lis">Zombieland Saga Dubbed</div></a>
+	</div>
+	</div>
+	<div class="ctrbox">
+		<div class="gpfr">
+			<div class="unfr">
+			<script type="text/javascript" src="js_u_71085.js"></script><noscript><a href="http://u-on.eu/in.php?u=71085"><img src="/img/c_u_71085_r__l_animeheaven-eu/.png" alt="U-ON"></a></noscript>
+			</div>
+			<script type="text/javascript" src="js_u_57734.js"></script><noscript><a href="#"><img src="/img/c_u_57734_r__l_animeheaven-eu/.png" alt="C-STAT"></a></noscript>
+	</div>
+</div>
+	</div></div><div class="cleft"></div>
+</div></div><div class="line"></div><div class="footer">
+<div class="footermain">
+<div class="follow">Follow us:</div><div class="socbox">
+		<a href="#"><div class="socf"></div></a>
+		<a href="#"><div class="socg"></div></a>
+		<a href="#"><div class="soct"></div></a>
+	</div>
+	<div class="footert2">4.94 ms</div>
+<div class="footert">&#169;<a class="footera" href="https://github.com/1DavidCarbon/animeheaven.eu-site-design">Tidis</a> 2015</div>
+</div></div>
+	</body>
+</html>
