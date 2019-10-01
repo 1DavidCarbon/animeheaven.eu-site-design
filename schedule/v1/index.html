@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Release Schedule - Anime Heaven Site Design</title>
+<link rel="shortcut icon" href="/animeheaven.eu-site-design/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/animeheaven.eu-site-design/favicon.ico" type="image/x-icon">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta property="og:image" content="/animeheaven.eu-site-design/OG.png"/>
+<link type="text/css" rel="stylesheet" id="stylesheet" href="/animeheaven.eu-site-design/css/style3v4.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head><body><div class="header">
+	<div class="headermain">
+	<a href="/animeheaven.eu-site-design/"><div class="logo"></div></a>
+	<div class="searchbox"><form class="searchform" action="search" method="get"><input class="searchinput" name="q" maxlength="100" placeholder="Search"><input class="searchsubmit" type="submit" value=""></form></div>
+<div class="bwbox" id="bbox" onclick="makebw()"><div class="bwselect" id="bwsel"></div></div>
+<a class="menua" href="/animeheaven.eu-site-design/staff"><div class="menue">Staff</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/"><div class="menue">Random</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/schedule"><div class="menue">Schedule</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/50latest_sr_3"><div class="menue">Popular</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/50latest_sr_1"><div class="menue">Ongoing</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/genres"><div class="menue">Genres</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/movies"><div class="menue">Movies</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/dubbed"><div class="menue">Dubbed</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/anime"><div class="menue">Anime</div></a>
+<div class="burger" id="burgeri" onclick="makemenu()"></div>
+</div>
+</div>
+<div class="burgermenu" id="burger">
+<div class="line"></div>
+<a class="menua" href="/animeheaven.eu-site-design/anime"><div class="menue2">Anime</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/dubbed"><div class="menue2">Dubbed</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/movies"><div class="menue2">Movies</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/genres"><div class="menue2">Genres</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/years"><div class="menue2">Years</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/50latest_sr_1"><div class="menue2">Ongoing</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/50latest_sr_3"><div class="menue2">Popular Today</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/schedule"><div class="menue2">Schedule</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/"><div class="menue2">Random</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/staff"><div class="menue2">Staff</div></a>
+</div>
+<div class="cleft"></div><div class="line"></div><script>
+var burg = document.getElementById('burger');
+var burgi = document.getElementById('burgeri');
+var bwbox = document.getElementById('bbox');
+var bwseli = document.getElementById('bwsel');
+var stylesheeti = document.getElementById('stylesheet');
+var menu=0;
+var bw=0;
+function getCookie(name) {
+  var value = "; " + document.cookie;
+  var parts = value.split("; " + name + "=");
+  if (parts.length == 2) return parts.pop().split(";").shift();
+}
+function makemenu()
+{
+	if(menu==0)
+	{
+		burg.className='burgermenu2';
+		burgi.className='burgeractive';
+		menu=1;
+		console.log(1);
+	}
+	else
+	{
+		burg.className='burgermenu';
+		burgi.className='burger';
+		menu=0;
+		console.log(2);
+	}
+}
+function makebw()
+{
+	if(bw==0)
+	{
+		bwseli.className='bwselect2';
+		bw=1;
+		stylesheeti.href='/animeheaven.eu-site-design/css/style3v3.css';
+		var d = new Date();
+		d.setTime(d.getTime() + (365*24*60*60*1000));
+		var expires = "expires="+ d.toUTCString();
+		document.cookie = "bw=1;" + expires + ";path=/";
+	}
+	else
+	{
+		bwseli.className='bwselect';
+		stylesheeti.href='/animeheaven.eu-site-design/css/style3v2.css';
+		bw=0;
+		var d = new Date();
+		d.setTime(d.getTime() + (365*24*60*60*1000));
+		var expires = "expires="+ d.toUTCString();
+		document.cookie = "bw=0;" + expires + ";path=/";
+	}
+}
+</script>
+<div class="notmain">
+<div class="maindark">
+<div class="lisbox"><div class="gridpgboxmain"><div class="gridpgbox"><a class="gridvan" href="/animeheaven.eu-site-design/schedule"><div class="gridv2main"><div class="gridv">Grid View</div></div></a></div></div><div class="cleft"></div><div class="lisb">Monday</div><a class="an" href="#"><div class="lis">Dropkick on My Devil</div></a><a class="an" href="#"><div class="lis">Holmes of Kyoto</div></a><a class="an" href="#"><div class="lis">Kakuriyo -Bed and Breakfast for Spirits-</div></a><a class="an" href="#"><div class="lis">One Room 2nd Season</div></a><a class="an" href="#"><div class="lis">Phantom in the Twilight</div></a><div class="cleft"></div><div class="lisb">Tuesday</div><a class="an" href="#"><div class="lis">Angolmois - Record of Mongol Invasion</div></a><a class="an" href="#"><div class="lis">Black Clover</div></a><a class="an" href="#"><div class="lis">Gundam Build Divers</div></a><a class="an" href="#"><div class="lis">Lupin III 2018</div></a><a class="an" href="#"><div class="lis">Mr. Tonegawa Middle Management Blues</div></a><a class="an" href="#"><div class="lis">Overlord 3rd Season</div></a><a class="an" href="#"><div class="lis">Senjuushi - The Thousand Noble Musketeers</div></a><div class="cleft"></div><div class="lisb">Wednesday</div><a class="an" href="#"><div class="lis">Free - Dive to the Future</div></a><a class="an" href="#"><div class="lis">Steins Gate 0</div></a><a class="an" href="#"><div class="lis">Yu-Gi-Oh VRAINS</div></a><div class="cleft"></div><div class="lisb">Thursday</div><a class="an" href="#"><div class="lis">100 Sleeping Princes and the Kingdom of Dreams</div></a><a class="an" href="#"><div class="lis">Banana Fish</div></a><a class="an" href="#"><div class="lis">Boruto - Naruto Next Generations</div></a><a class="an" href="HowNOTtoSummonaDemonLord"><div class="lis">How NOT to Summon a Demon Lord</div></a><a class="an" href="#"><div class="lis">Seven Senses of the Re Union</div></a><div class="cleft"></div><div class="lisb">Friday</div><a class="an" href="#"><div class="lis">Angels of Death</div></a><a class="an" href="#"><div class="lis">Chios School Road</div></a><a class="an" href="#"><div class="lis">Grand Blue</div></a><a class="an" href="#"><div class="lis">Happy Sugar Life</div></a><a class="an" href="#"><div class="lis">Harukana Receive</div></a><a class="an" href="#"><div class="lis">Isekai Izakaya - Japanese Food From Another World</div></a><a class="an" href="#"><div class="lis">Lord of Vermilion - The Crimson King</div></a><a class="an" href="#"><div class="lis">Muhyo and Rojis Bureau of Supernatural Investigation</div></a><a class="an" href="#"><div class="lis">My Sweet Tyrant</div></a><a class="an" href="#"><div class="lis">Ninja Girl and Samurai Master 3rd Season</div></a><a class="an" href="#"><div class="lis">Working Buddies 2</div></a><a class="an" href="#"><div class="lis">Yamishibai - Japanese Ghost Stories Season 6</div></a><div class="cleft"></div><div class="lisb">Saturday</div><a class="an" href="#"><div class="lis">Cells at Work</div></a><a class="an" href="#"><div class="lis">Major 2nd</div></a><a class="an" href="#"><div class="lis">Music Girls</div></a><a class="an" href="#"><div class="lis">My Hero Academia 3</div></a><a class="an" href="#"><div class="lis">One Piece</div></a><a class="an" href="#"><div class="lis">Persona 5 The Animation</div></a><a class="an" href="#"><div class="lis">Revue Starlight</div></a><a class="an" href="#"><div class="lis">The Master of Ragnarok and Blesser of Einherjar</div></a><a class="an" href="#"><div class="lis">Yuuna and the Haunted Hot Springs</div></a><div class="cleft"></div><div class="lisb">Sunday</div><a class="an" href="#"><div class="lis">Asobi Asobase - workshop of fun -</div></a><a class="an" href="#"><div class="lis">Attack on Titan 3</div></a><a class="an" href="#"><div class="lis">GeGeGe no Kitaro</div></a><a class="an" href="#"><div class="lis">Gintama - Silver Soul Arc 2</div></a><a class="an" href="#"><div class="lis">Hanebado</div></a><a class="an" href="#"><div class="lis">Island</div></a><a class="an" href="#"><div class="lis">Planet With</div></a></div>	<div class="sidemain"><div class="side">
+<div class="chatbox"><script id="cid0020000167426772488" data-cfasync="false" async src="/animeheaven.eu-site-design/js/gz/emb.js" style="width: 100%;height: 459px;">{"handle":"animeheaveneu","arch":"js","styles":{"a":"ffffff","c":"e81e30","d":"e81e30","e":"ffffff","h":"ffffff","l":"efefef","m":"ffffff","q":"ffffff","t":0,"sbc":"bbbbbb"}}</script></div>
+	<div class="randombox">
+	<div class="c"><a class="an" href="#"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Rosario_and_Vampire_Capu2.jpg" alt="Rosario and Vampire Capu2"></a></div>
+	<div class="rnd">Rosario and Vampire Capu2</div></a>
+	</div>
+		<div class="ongoingbox">
+	<div class="lisbox2">
+		<div class="c"><div class="lisb">Ongoing anime
+		</div>
+		</div>
+		<a class="an" href="#"><div class="lis">A Certain Magical Index 3</div></a><a class="an" href="#"><div class="lis">A Certain Magical Index 3 Dubbed</div></a><a class="an" href="#"><div class="lis">Ace Attorney Season 2</div></a><a class="an" href="#"><div class="lis">Angels of Death</div></a><a class="an" href="#"><div class="lis">Angels of Death Dubbed</div></a><a class="an" href="#"><div class="lis">Anima Yell</div></a><a class="an" href="#"><div class="lis">As Miss Beelzebub Likes</div></a><a class="an" href="#"><div class="lis">Attack on Titan - Lost Girls OVA</div></a><a class="an" href="#"><div class="lis">Attack on Titan 3 Dubbed</div></a><a class="an" href="#"><div class="lis">Baki</div></a><a class="an" href="#"><div class="lis">Bakumatsu</div></a><a class="an" href="#"><div class="lis">Banana Fish</div></a><a class="an" href="#"><div class="lis">Between the Sky and Sea</div></a><a class="an" href="#"><div class="lis">Beyblade Burst Dubbed</div></a><a class="an" href="#"><div class="lis">Black Clover</div></a><a class="an" href="#"><div class="lis">Black Clover Dubbed</div></a><a class="an" href="#"><div class="lis">Bloom Into You</div></a><a class="an" href="#"><div class="lis">Boarding School Juliet</div></a><a class="an" href="#"><div class="lis">Boruto - Naruto Next Generations</div></a><a class="an" href="#"><div class="lis">Boruto - Naruto Next Generations Dubbed</div></a><a class="an" href="#"><div class="lis">Captain Tsubasa 2018</div></a><a class="an" href="#"><div class="lis">Conception</div></a><a class="an" href="#"><div class="lis">Conception Dubbed</div></a><a class="an" href="#"><div class="lis">DAKAICHI -Im being harassed by the sexiest man of the year-</div></a><a class="an" href="#"><div class="lis">Digimon Adventure Tri</div></a><a class="an" href="#"><div class="lis">Double Decker - Doug and Kirill</div></a><a class="an" href="#"><div class="lis">Double Decker - Doug and Kirill Dubbed</div></a><a class="an" href="#"><div class="lis">Dragon Ball Heroes</div></a><a class="an" href="#"><div class="lis">Dragon Ball Super Dubbed</div></a><a class="an" href="#"><div class="lis">FLCL - Alternative Dubbed</div></a><a class="an" href="#"><div class="lis">Fairy Tail 2014 OVA</div></a><a class="an" href="#"><div class="lis">Fairy Tail 2018</div></a><a class="an" href="#"><div class="lis">Fairy Tail 2018 Dubbed</div></a><a class="an" href="#"><div class="lis">Fist of the Blue Sky - Regenesis 2nd Season</div></a><a class="an" href="#"><div class="lis">Gakuen Basara - Samurai High School</div></a><a class="an" href="#"><div class="lis">GeGeGe no Kitaro</div></a><a class="an" href="#"><div class="lis">Goblin Slayer</div></a><a class="an" href="#"><div class="lis">Goblin Slayer Dubbed</div></a><a class="an" href="#"><div class="lis">Golden Kamuy 2nd Season</div></a><a class="an" href="#"><div class="lis">Golden Kamuy 2nd Season Dubbed</div></a><a class="an" href="#"><div class="lis">Gurazeni - Money Pitch 2nd Season</div></a><a class="an" href="#"><div class="lis">Hanebado Dubbed</div></a><a class="an" href="#"><div class="lis">Himote House</div></a><a class="an" href="#"><div class="lis">Hinomaru Sumo</div></a><a class="an" href="#"><div class="lis">Hinomaru Sumo Dubbed</div></a><a class="an" href="#"><div class="lis">Hunter x Hunter 2011 Dubbed</div></a><a class="an" href="#"><div class="lis">Irozuku Sekai no Ashita kara</div></a><a class="an" href="#"><div class="lis">Jingais Wife</div></a><a class="an" href="#"><div class="lis">JoJos Bizarre Adventure - Diamond is Unbreakable Dubbed</div></a><a class="an" href="#"><div class="lis">JoJos Bizarre Adventure - Golden Wind</div></a><a class="an" href="#"><div class="lis">Karakuri Circus</div></a><a class="an" href="#"><div class="lis">Laytons Mystery Detective Agency</div></a><a class="an" href="#"><div class="lis">Merc StoriA - The Apathetic Boy and the Girl in a Bottle</div></a><a class="an" href="#"><div class="lis">Monster Hunter Stories - RIDE ON Dubbed</div></a><a class="an" href="#"><div class="lis">Mr. Tonegawa Middle Management Blues</div></a><a class="an" href="#"><div class="lis">Mr. Tonegawa Middle Management Blues Dubbed</div></a><a class="an" href="#"><div class="lis">Ms vampire who lives in my neighborhood</div></a><a class="an" href="#"><div class="lis">My Sister - My Writer</div></a><a class="an" href="#"><div class="lis">Naruto Shippuden Dubbed</div></a><a class="an" href="#"><div class="lis">One Piece</div></a><a class="an" href="#"><div class="lis">One Piece Dubbed</div></a><a class="an" href="#"><div class="lis">Pokemon Sun and Moon</div></a><a class="an" href="#"><div class="lis">Pokemon XY and Z</div></a><a class="an" href="#"><div class="lis">Pokemon XY and Z Dubbed</div></a><a class="an" href="#"><div class="lis">RErideD - Derrida who leaps through time</div></a><a class="an" href="#"><div class="lis">RErideD - Derrida who leaps through time Dubbed</div></a><a class="an" href="#"><div class="lis">Radiant</div></a><a class="an" href="#"><div class="lis">Radiant Dubbed</div></a><a class="an" href="#"><div class="lis">Rascal Does Not Dream of Bunny Girl Senpai</div></a><a class="an" href="#"><div class="lis">Re ZERO -Starting Life in Another World- Dubbed</div></a><a class="an" href="#"><div class="lis">Reikenzan - Eichi e no Shikaku</div></a><a class="an" href="#"><div class="lis">Release the Spyce</div></a><a class="an" href="#"><div class="lis">Run with the Wind</div></a><a class="an" href="#"><div class="lis">SSSS Gridman</div></a><a class="an" href="#"><div class="lis">SSSS Gridman Dubbed</div></a><a class="an" href="#"><div class="lis">Senran Kagura - Shinovi Master</div></a><a class="an" href="#"><div class="lis">Senran Kagura - Shinovi Master Dubbed</div></a><a class="an" href="#"><div class="lis">Skull-face Bookseller Honda-san</div></a><a class="an" href="#"><div class="lis">Space Battleship Tiramisu 2</div></a><a class="an" href="#"><div class="lis">Space Battleship Tiramisu 2 Dubbed</div></a><a class="an" href="#"><div class="lis">Sword Art Online - Alicization</div></a><a class="an" href="#"><div class="lis">Tada Never Falls in Love Dubbed</div></a><a class="an" href="#"><div class="lis">That Time I Got Reincarnated as a Slime</div></a><a class="an" href="#"><div class="lis">That Time I Got Reincarnated as a Slime Dubbed</div></a><a class="an" href="#"><div class="lis">The Girl in Twilight</div></a><a class="an" href="#"><div class="lis">Todays Menu for Emiya Family</div></a><a class="an" href="#"><div class="lis">Tokyo Ghoul - re 2nd Season</div></a><a class="an" href="#"><div class="lis">Tokyo Ghoul - re 2nd Season Dubbed</div></a><a class="an" href="#"><div class="lis">Tsurune</div></a><a class="an" href="#"><div class="lis">Twin Star Exorcists Dubbed</div></a><a class="an" href="#"><div class="lis">Ulysses - Jeanne dArc and the Alchemist Knight</div></a><a class="an" href="#"><div class="lis">Ulysses - Jeanne dArc and the Alchemist Knight Dubbed</div></a><a class="an" href="#"><div class="lis">UzaMaid</div></a><a class="an" href="#"><div class="lis">Voice of Fox</div></a><a class="an" href="#"><div class="lis">Xuan Yuan Sword Luminary</div></a><a class="an" href="#"><div class="lis">Youkai Watch</div></a><a class="an" href="#"><div class="lis">Yu-Gi-Oh VRAINS</div></a><a class="an" href="#"><div class="lis">Yuuna and the Haunted Hot Springs OVA</div></a><a class="an" href="#"><div class="lis">Zombieland Saga</div></a><a class="an" href="#"><div class="lis">Zombieland Saga Dubbed</div></a>
+	</div>
+	</div>
+	<div class="ctrbox">
+		<div class="gpfr">
+			<div class="unfr">
+			<!-- Removed Script-->
+			</div>
+		<!-- Removed Script -->
+	</div>
+</div>
+	</div></div><div class="cleft"></div>
+</div></div><div class="line"></div><div class="footer">
+<div class="footermain">
+<div class="follow">Follow us:</div><div class="socbox">
+		<a href="#"><div class="socf"></div></a>
+		<a href="#"><div class="socg"></div></a>
+		<a href="#"><div class="soct"></div></a>
+	</div>
+	<div class="footert2">4.94 ms</div>
+<div class="footert"><a class="footera" href="https://github.com/1DavidCarbon/animeheaven.eu-site-design">&#169; Tidis 2015</a></div>
+</div></div>
+	</body>
+</html>
