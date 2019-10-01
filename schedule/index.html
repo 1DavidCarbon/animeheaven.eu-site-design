@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Release Schedule - Anime Heaven Site Design</title>
+<link rel="shortcut icon" href="/animeheaven.eu-site-design/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/animeheaven.eu-site-design/favicon.ico" type="image/x-icon">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta property="og:image" content="/animeheaven.eu-site-design/OG.png"/>
+<link type="text/css" rel="stylesheet" id="stylesheet" href="/animeheaven.eu-site-design/css/style3v4.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head><body><div class="header">
+	<div class="headermain">
+	<a href="/animeheaven.eu-site-design/"><div class="logo"></div></a>
+	<div class="searchbox"><form class="searchform" action="search" method="get"><input class="searchinput" name="q" maxlength="100" placeholder="Search"><input class="searchsubmit" type="submit" value=""></form></div>
+<div class="bwbox" id="bbox" onclick="makebw()"><div class="bwselect" id="bwsel"></div></div>
+<a class="menua" href="/animeheaven.eu-site-design/staff"><div class="menue">Staff</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/"><div class="menue">Random</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/schedule"><div class="menue">Schedule</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/50latest_sr_3"><div class="menue">Popular</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/50latest_sr_1"><div class="menue">Ongoing</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/genres"><div class="menue">Genres</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/movies"><div class="menue">Movies</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/dubbed"><div class="menue">Dubbed</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/anime"><div class="menue">Anime</div></a>
+<div class="burger" id="burgeri" onclick="makemenu()"></div>
+</div>
+</div>
+<div class="burgermenu" id="burger">
+<div class="line"></div>
+<a class="menua" href="/animeheaven.eu-site-design/anime"><div class="menue2">Anime</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/dubbed"><div class="menue2">Dubbed</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/movies"><div class="menue2">Movies</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/genres"><div class="menue2">Genres</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/years"><div class="menue2">Years</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/50latest_sr_1"><div class="menue2">Ongoing</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/50latest_sr_3"><div class="menue2">Popular Today</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/schedule"><div class="menue2">Schedule</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/"><div class="menue2">Random</div></a>
+<a class="menua" href="/animeheaven.eu-site-design/staff"><div class="menue2">Staff</div></a>
+</div>
+<div class="cleft"></div><div class="line"></div><script>
+var burg = document.getElementById('burger');
+var burgi = document.getElementById('burgeri');
+var bwbox = document.getElementById('bbox');
+var bwseli = document.getElementById('bwsel');
+var stylesheeti = document.getElementById('stylesheet');
+var menu=0;
+var bw=0;
+function getCookie(name) {
+  var value = "; " + document.cookie;
+  var parts = value.split("; " + name + "=");
+  if (parts.length == 2) return parts.pop().split(";").shift();
+}
+function makemenu()
+{
+	if(menu==0)
+	{
+		burg.className='burgermenu2';
+		burgi.className='burgeractive';
+		menu=1;
+		console.log(1);
+	}
+	else
+	{
+		burg.className='burgermenu';
+		burgi.className='burger';
+		menu=0;
+		console.log(2);
+	}
+}
+function makebw()
+{
+	if(bw==0)
+	{
+		bwseli.className='bwselect2';
+		bw=1;
+		stylesheeti.href='/animeheaven.eu-site-design/css/style3v3.css';
+		var d = new Date();
+		d.setTime(d.getTime() + (365*24*60*60*1000));
+		var expires = "expires="+ d.toUTCString();
+		document.cookie = "bw=1;" + expires + ";path=/";
+	}
+	else
+	{
+		bwseli.className='bwselect';
+		stylesheeti.href='/animeheaven.eu-site-design/css/style3v2.css';
+		bw=0;
+		var d = new Date();
+		d.setTime(d.getTime() + (365*24*60*60*1000));
+		var expires = "expires="+ d.toUTCString();
+		document.cookie = "bw=0;" + expires + ";path=/";
+	}
+}
+</script>
+<div class="notmain">
+<div class="maindark">
+<div class="lisbox22"><div class="gridpgboxmain2"><div class="gridpgbox"><a class="gridvan" href="/schedule_v_1"><div class="gridv2main"><div class="gridv">List View</div></div></a></div></div><div class="cleft"></div><div class="lisbg">Monday</div><div class="similarboxmain"><div class="similarbox"><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Fist_of_the_Blue_Sky_-_Regenesis_2nd_Season.jpg" alt="Fist of the Blue Sky - Regenesis 2nd Season"></div>
+				<div class="similard"><div class="similardd">Fist of the Blue Sky - Regenesis 2nd Season
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Golden_Kamuy_2nd_Season.jpg" alt="Golden Kamuy 2nd Season"></div>
+				<div class="similard"><div class="similardd">Golden Kamuy 2nd Season
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Space_Battleship_Tiramisu_2.jpg" alt="Space Battleship Tiramisu 2"></div>
+				<div class="similard"><div class="similardd">Space Battleship Tiramisu 2
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/That_Time_I_Got_Reincarnated_as_a_Slime.jpg" alt="That Time I Got Reincarnated as a Slime"></div>
+				<div class="similard"><div class="similardd">That Time I Got Reincarnated as a Slime
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/The_Girl_in_Twilight.jpg" alt="The Girl in Twilight"></div>
+				<div class="similard"><div class="similardd">The Girl in Twilight
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Xuan_Yuan_Sword_Luminary.jpg" alt="Xuan Yuan Sword Luminary"></div>
+				<div class="similard"><div class="similardd">Xuan Yuan Sword Luminary
+				</div></div></div></div></a></div></div><div class="cleft"></div><div class="lisbg">Tuesday</div><div class="similarboxmain"><div class="similarbox"><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Black_Clover.jpg" alt="Black Clover"></div>
+				<div class="similard"><div class="similardd">Black Clover
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Conception.jpg" alt="Conception"></div>
+				<div class="similard"><div class="similardd">Conception
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Jingais_Wife.jpg" alt="Jingais Wife"></div>
+				<div class="similard"><div class="similardd">Jingais Wife
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Mr._Tonegawa_Middle_Management_Blues.jpg" alt="Mr. Tonegawa Middle Management Blues"></div>
+				<div class="similard"><div class="similardd">Mr. Tonegawa Middle Management Blues
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Run_with_the_Wind.jpg" alt="Run with the Wind"></div>
+				<div class="similard"><div class="similardd">Run with the Wind
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Tokyo_Ghoul_-_re_2nd_Season.jpg" alt="Tokyo Ghoul - re 2nd Season"></div>
+				<div class="similard"><div class="similardd">Tokyo Ghoul - re 2nd Season
+				</div></div></div></div></a></div></div><div class="cleft"></div><div class="lisbg">Wednesday</div><div class="similarboxmain"><div class="similarbox"><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/As_Miss_Beelzebub_Likes.jpg" alt="As Miss Beelzebub Likes"></div>
+				<div class="similard"><div class="similardd">As Miss Beelzebub Likes
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Between_the_Sky_and_Sea.jpg" alt="Between the Sky and Sea"></div>
+				<div class="similard"><div class="similardd">Between the Sky and Sea
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/My_Sister_-_My_Writer.jpg" alt="My Sister - My Writer"></div>
+				<div class="similard"><div class="similardd">My Sister - My Writer
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/RErideD_-_Derrida_who_leaps_through_time.jpg" alt="RErideD - Derrida who leaps through time"></div>
+				<div class="similard"><div class="similardd">RErideD - Derrida who leaps through time
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Rascal_Does_Not_Dream_of_Bunny_Girl_Senpai.jpg" alt="Rascal Does Not Dream of Bunny Girl Senpai"></div>
+				<div class="similard"><div class="similardd">Rascal Does Not Dream of Bunny Girl Senpai
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Yu-Gi-Oh_VRAINS.jpg" alt="Yu-Gi-Oh VRAINS"></div>
+				<div class="similard"><div class="similardd">Yu-Gi-Oh VRAINS
+				</div></div></div></div></a></div></div><div class="cleft"></div><div class="lisbg">Thursday</div><div class="similarboxmain"><div class="similarbox"><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Bakumatsu.jpg" alt="Bakumatsu"></div>
+				<div class="similard"><div class="similardd">Bakumatsu
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Banana_Fish.jpg" alt="Banana Fish"></div>
+				<div class="similard"><div class="similardd">Banana Fish
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Karakuri_Circus.jpg" alt="Karakuri Circus"></div>
+				<div class="similard"><div class="similardd">Karakuri Circus
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Merc_StoriA_-_The_Apathetic_Boy_and_the_Girl_in_a_Bottle.jpg" alt="Merc StoriA - The Apathetic Boy and the Girl in a Bottle"></div>
+				<div class="similard"><div class="similardd">Merc StoriA - The Apathetic Boy and the Girl in a Bottle
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Zombieland_Saga.jpg" alt="Zombieland Saga"></div>
+				<div class="similard"><div class="similardd">Zombieland Saga
+				</div></div></div></div></a></div></div><div class="cleft"></div><div class="lisbg">Friday</div><div class="similarboxmain"><div class="similarbox"><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/A_Certain_Magical_Index_3.jpg" alt="A Certain Magical Index 3"></div>
+				<div class="similard"><div class="similardd">A Certain Magical Index 3
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Angels_of_Death.jpg" alt="Angels of Death"></div>
+				<div class="similard"><div class="similardd">Angels of Death
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Bloom_Into_You.jpg" alt="Bloom Into You"></div>
+				<div class="similard"><div class="similardd">Bloom Into You
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Boarding_School_Juliet.jpg" alt="Boarding School Juliet"></div>
+				<div class="similard"><div class="similardd">Boarding School Juliet
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/DAKAICHI_-Im_being_harassed_by_the_sexiest_man_of_the_year-.jpg" alt="DAKAICHI -Im being harassed by the sexiest man of the year-"></div>
+				<div class="similard"><div class="similardd">DAKAICHI -Im being harassed by the sexiest man of the year-
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Gakuen_Basara_-_Samurai_High_School.jpg" alt="Gakuen Basara - Samurai High School"></div>
+				<div class="similard"><div class="similardd">Gakuen Basara - Samurai High School
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Gurazeni_-_Money_Pitch_2nd_Season.jpg" alt="Gurazeni - Money Pitch 2nd Season"></div>
+				<div class="similard"><div class="similardd">Gurazeni - Money Pitch 2nd Season
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Hinomaru_Sumo.jpg" alt="Hinomaru Sumo"></div>
+				<div class="similard"><div class="similardd">Hinomaru Sumo
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Irozuku_Sekai_no_Ashita_kara.jpg" alt="Irozuku Sekai no Ashita kara"></div>
+				<div class="similard"><div class="similardd">Irozuku Sekai no Ashita kara
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/JoJos_Bizarre_Adventure_-_Golden_Wind.jpg" alt="JoJos Bizarre Adventure - Golden Wind"></div>
+				<div class="similard"><div class="similardd">JoJos Bizarre Adventure - Golden Wind
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Ms_vampire_who_lives_in_my_neighborhood.jpg" alt="Ms vampire who lives in my neighborhood"></div>
+				<div class="similard"><div class="similardd">Ms vampire who lives in my neighborhood
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Senran_Kagura_-_Shinovi_Master.jpg" alt="Senran Kagura - Shinovi Master"></div>
+				<div class="similard"><div class="similardd">Senran Kagura - Shinovi Master
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/UzaMaid.jpg" alt="UzaMaid"></div>
+				<div class="similard"><div class="similardd">UzaMaid
+				</div></div></div></div></a></div></div><div class="cleft"></div><div class="lisbg">Saturday</div><div class="similarboxmain"><div class="similarbox"><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Ace_Attorney_Season_2.jpg" alt="Ace Attorney Season 2"></div>
+				<div class="similard"><div class="similardd">Ace Attorney Season 2
+				</div></div></div></div></a><a class="an" href="FairyTail2018">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Fairy_Tail_2018.jpg" alt="Fairy Tail 2018"></div>
+				<div class="similard"><div class="similardd">Fairy Tail 2018
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Goblin_Slayer.jpg" alt="Goblin Slayer"></div>
+				<div class="similard"><div class="similardd">Goblin Slayer
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/One_Piece.jpg" alt="One Piece"></div>
+				<div class="similard"><div class="similardd">One Piece
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Radiant.jpg" alt="Radiant"></div>
+				<div class="similard"><div class="similardd">Radiant
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Release_the_Spyce.jpg" alt="Release the Spyce"></div>
+				<div class="similard"><div class="similardd">Release the Spyce
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/SSSS_Gridman.jpg" alt="SSSS Gridman"></div>
+				<div class="similard"><div class="similardd">SSSS Gridman
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Sword_Art_Online_-_Alicization.jpg" alt="Sword Art Online - Alicization"></div>
+				<div class="similard"><div class="similardd">Sword Art Online - Alicization
+				</div></div></div></div></a></div></div><div class="cleft"></div><div class="lisbg">Sunday</div><div class="similarboxmain"><div class="similarbox"><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Anima_Yell.jpg" alt="Anima Yell"></div>
+				<div class="similard"><div class="similardd">Anima Yell
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Boruto_-_Naruto_Next_Generations.jpg" alt="Boruto - Naruto Next Generations"></div>
+				<div class="similard"><div class="similardd">Boruto - Naruto Next Generations
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Double_Decker_-_Doug_and_Kirill.jpg" alt="Double Decker - Doug and Kirill"></div>
+				<div class="similard"><div class="similardd">Double Decker - Doug and Kirill
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/GeGeGe_no_Kitaro.jpg" alt="GeGeGe no Kitaro"></div>
+				<div class="similard"><div class="similardd">GeGeGe no Kitaro
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Himote_House.jpg" alt="Himote House"></div>
+				<div class="similard"><div class="similardd">Himote House
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Skull-face_Bookseller_Honda-san.jpg" alt="Skull-face Bookseller Honda-san"></div>
+				<div class="similard"><div class="similardd">Skull-face Bookseller Honda-san
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Tsurune.jpg" alt="Tsurune"></div>
+				<div class="similard"><div class="similardd">Tsurune
+				</div></div></div></div></a><a class="an" href="#">
+				<div class="similarcmain"><div class="similarc"><div class="similarpic"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Ulysses_-_Jeanne_dArc_and_the_Alchemist_Knight.jpg" alt="Ulysses - Jeanne dArc and the Alchemist Knight"></div>
+				<div class="similard"><div class="similardd">Ulysses - Jeanne dArc and the Alchemist Knight
+				</div></div></div></div></a></div></div></div>	<div class="sidemain"><div class="side">
+<div class="chatbox"><script id="cid0020000167426772488" data-cfasync="false" async src="js/gz/emb.js" style="width: 100%;height: 459px;">{"handle":"animeheaveneu","arch":"js","styles":{"a":"ffffff","c":"e81e30","d":"e81e30","e":"ffffff","h":"ffffff","l":"efefef","m":"ffffff","q":"ffffff","t":0,"sbc":"bbbbbb"}}</script></div>
+	<div class="randombox">
+	<div class="c"><a class="an" href="#"><img class="coveri" src="/animeheaven.eu-site-design/img/coversjpg/Soul_Eater_Not.jpg" alt="Soul Eater Not"></a></div>
+	<div class="rnd">Soul Eater Not</div></a>
+	</div>
+		<div class="ongoingbox">
+	<div class="lisbox2">
+		<div class="c"><div class="lisb">Ongoing anime
+		</div>
+		</div>
+		<a class="an" href="#"><div class="lis">A Certain Magical Index 3</div></a><a class="an" href="#"><div class="lis">A Certain Magical Index 3 Dubbed</div></a><a class="an" href="#"><div class="lis">Ace Attorney Season 2</div></a><a class="an" href="#"><div class="lis">Angels of Death</div></a><a class="an" href="#"><div class="lis">Angels of Death Dubbed</div></a><a class="an" href="#"><div class="lis">Anima Yell</div></a><a class="an" href="#"><div class="lis">As Miss Beelzebub Likes</div></a><a class="an" href="#"><div class="lis">Attack on Titan - Lost Girls OVA</div></a><a class="an" href="#"><div class="lis">Attack on Titan 3 Dubbed</div></a><a class="an" href="#"><div class="lis">Baki</div></a><a class="an" href="#"><div class="lis">Bakumatsu</div></a><a class="an" href="#"><div class="lis">Banana Fish</div></a><a class="an" href="#"><div class="lis">Between the Sky and Sea</div></a><a class="an" href="#"><div class="lis">Beyblade Burst Dubbed</div></a><a class="an" href="#"><div class="lis">Black Clover</div></a><a class="an" href="#"><div class="lis">Black Clover Dubbed</div></a><a class="an" href="#"><div class="lis">Bloom Into You</div></a><a class="an" href="#"><div class="lis">Boarding School Juliet</div></a><a class="an" href="#"><div class="lis">Boruto - Naruto Next Generations</div></a><a class="an" href="#"><div class="lis">Boruto - Naruto Next Generations Dubbed</div></a><a class="an" href="#"><div class="lis">Captain Tsubasa 2018</div></a><a class="an" href="#"><div class="lis">Conception</div></a><a class="an" href="#"><div class="lis">Conception Dubbed</div></a><a class="an" href="#"><div class="lis">DAKAICHI -Im being harassed by the sexiest man of the year-</div></a><a class="an" href="#"><div class="lis">Digimon Adventure Tri</div></a><a class="an" href="#"><div class="lis">Double Decker - Doug and Kirill</div></a><a class="an" href="#"><div class="lis">Double Decker - Doug and Kirill Dubbed</div></a><a class="an" href="#"><div class="lis">Dragon Ball Heroes</div></a><a class="an" href="#"><div class="lis">Dragon Ball Super Dubbed</div></a><a class="an" href="#"><div class="lis">FLCL - Alternative Dubbed</div></a><a class="an" href="#"><div class="lis">Fairy Tail 2014 OVA</div></a><a class="an" href="#"><div class="lis">Fairy Tail 2018</div></a><a class="an" href="#"><div class="lis">Fairy Tail 2018 Dubbed</div></a><a class="an" href="#"><div class="lis">Fist of the Blue Sky - Regenesis 2nd Season</div></a><a class="an" href="#"><div class="lis">Gakuen Basara - Samurai High School</div></a><a class="an" href="#"><div class="lis">GeGeGe no Kitaro</div></a><a class="an" href="#"><div class="lis">Goblin Slayer</div></a><a class="an" href="#"><div class="lis">Goblin Slayer Dubbed</div></a><a class="an" href="#"><div class="lis">Golden Kamuy 2nd Season</div></a><a class="an" href="#"><div class="lis">Golden Kamuy 2nd Season Dubbed</div></a><a class="an" href="#"><div class="lis">Gurazeni - Money Pitch 2nd Season</div></a><a class="an" href="#"><div class="lis">Hanebado Dubbed</div></a><a class="an" href="#"><div class="lis">Himote House</div></a><a class="an" href="#"><div class="lis">Hinomaru Sumo</div></a><a class="an" href="#"><div class="lis">Hinomaru Sumo Dubbed</div></a><a class="an" href="#"><div class="lis">Hunter x Hunter 2011 Dubbed</div></a><a class="an" href="#"><div class="lis">Irozuku Sekai no Ashita kara</div></a><a class="an" href="#"><div class="lis">Jingais Wife</div></a><a class="an" href="#"><div class="lis">JoJos Bizarre Adventure - Diamond is Unbreakable Dubbed</div></a><a class="an" href="#"><div class="lis">JoJos Bizarre Adventure - Golden Wind</div></a><a class="an" href="#"><div class="lis">Karakuri Circus</div></a><a class="an" href="#"><div class="lis">Laytons Mystery Detective Agency</div></a><a class="an" href="#"><div class="lis">Merc StoriA - The Apathetic Boy and the Girl in a Bottle</div></a><a class="an" href="#"><div class="lis">Monster Hunter Stories - RIDE ON Dubbed</div></a><a class="an" href="#"><div class="lis">Mr. Tonegawa Middle Management Blues</div></a><a class="an" href="#"><div class="lis">Mr. Tonegawa Middle Management Blues Dubbed</div></a><a class="an" href="#"><div class="lis">Ms vampire who lives in my neighborhood</div></a><a class="an" href="#"><div class="lis">My Sister - My Writer</div></a><a class="an" href="#"><div class="lis">Naruto Shippuden Dubbed</div></a><a class="an" href="#"><div class="lis">One Piece</div></a><a class="an" href="#"><div class="lis">One Piece Dubbed</div></a><a class="an" href="#"><div class="lis">Pokemon Sun and Moon</div></a><a class="an" href="#"><div class="lis">Pokemon XY and Z</div></a><a class="an" href="#"><div class="lis">Pokemon XY and Z Dubbed</div></a><a class="an" href="#"><div class="lis">RErideD - Derrida who leaps through time</div></a><a class="an" href="#"><div class="lis">RErideD - Derrida who leaps through time Dubbed</div></a><a class="an" href="#"><div class="lis">Radiant</div></a><a class="an" href="#"><div class="lis">Radiant Dubbed</div></a><a class="an" href="#"><div class="lis">Rascal Does Not Dream of Bunny Girl Senpai</div></a><a class="an" href="#"><div class="lis">Re ZERO -Starting Life in Another World- Dubbed</div></a><a class="an" href="#"><div class="lis">Reikenzan - Eichi e no Shikaku</div></a><a class="an" href="#"><div class="lis">Release the Spyce</div></a><a class="an" href="#"><div class="lis">Run with the Wind</div></a><a class="an" href="#"><div class="lis">SSSS Gridman</div></a><a class="an" href="#"><div class="lis">SSSS Gridman Dubbed</div></a><a class="an" href="#"><div class="lis">Senran Kagura - Shinovi Master</div></a><a class="an" href="#"><div class="lis">Senran Kagura - Shinovi Master Dubbed</div></a><a class="an" href="#"><div class="lis">Skull-face Bookseller Honda-san</div></a><a class="an" href="#"><div class="lis">Space Battleship Tiramisu 2</div></a><a class="an" href="#"><div class="lis">Space Battleship Tiramisu 2 Dubbed</div></a><a class="an" href="#"><div class="lis">Sword Art Online - Alicization</div></a><a class="an" href="#"><div class="lis">Tada Never Falls in Love Dubbed</div></a><a class="an" href="#"><div class="lis">That Time I Got Reincarnated as a Slime</div></a><a class="an" href="#"><div class="lis">That Time I Got Reincarnated as a Slime Dubbed</div></a><a class="an" href="#"><div class="lis">The Girl in Twilight</div></a><a class="an" href="#"><div class="lis">Todays Menu for Emiya Family</div></a><a class="an" href="#"><div class="lis">Tokyo Ghoul - re 2nd Season</div></a><a class="an" href="#"><div class="lis">Tokyo Ghoul - re 2nd Season Dubbed</div></a><a class="an" href="#"><div class="lis">Tsurune</div></a><a class="an" href="#"><div class="lis">Twin Star Exorcists Dubbed</div></a><a class="an" href="#"><div class="lis">Ulysses - Jeanne dArc and the Alchemist Knight</div></a><a class="an" href="#"><div class="lis">Ulysses - Jeanne dArc and the Alchemist Knight Dubbed</div></a><a class="an" href="#"><div class="lis">UzaMaid</div></a><a class="an" href="#"><div class="lis">Voice of Fox</div></a><a class="an" href="#"><div class="lis">Xuan Yuan Sword Luminary</div></a><a class="an" href="#"><div class="lis">Youkai Watch</div></a><a class="an" href="#"><div class="lis">Yu-Gi-Oh VRAINS</div></a><a class="an" href="#"><div class="lis">Yuuna and the Haunted Hot Springs OVA</div></a><a class="an" href="#"><div class="lis">Zombieland Saga</div></a><a class="an" href="#"><div class="lis">Zombieland Saga Dubbed</div></a>
+	</div>
+	</div>
+	<div class="ctrbox">
+		<div class="gpfr">
+			<div class="unfr">
+			<!-- Removed Script-->
+			</div>
+		<!-- Removed Script -->
+	</div>
+</div>
+	</div></div><div class="cleft"></div>
+</div></div><div class="line"></div><div class="footer">
+<div class="footermain">
+<div class="follow">Follow us:</div><div class="socbox">
+		<a href="#"><div class="socf"></div></a>
+		<a href="#"><div class="socg"></div></a>
+		<a href="#"><div class="soct"></div></a>
+	</div>
+	<div class="footert2">4.94 ms</div>
+<div class="footert"><a class="footera" href="https://github.com/1DavidCarbon/animeheaven.eu-site-design">&#169; Tidis 2015</a></div>
+</div></div>
+	</body>
+</html>
